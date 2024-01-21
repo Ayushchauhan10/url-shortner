@@ -2,12 +2,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="popup.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+<style>
+   body{
+        padding: 5px;
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        column-gap:10px;
+    }
+    .div1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 5px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    #shortenBtn{
+        background-color: #4361ee;
+        width: 100px;
+        color: white;
+    }
+    #longUrl{
+        width: 100%;
+    }
+    #result {
+
+      width: 100%;
+      user-select: text; /* Allow text selection */
+      cursor: pointer;
+      border: 1px solid #ccc;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding: 5px;
+      position: relative;
+      display: inline-block;
+    }
+
+    #copy-icon {
+      position: absolute;
+      top: 50%;
+      right: -40px;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+
+</style>
 <body>
-  <input type="text" id="longUrl" placeholder="Enter URL">
-  <button id="shortenBtn">Shorten</button>
-  <div id="result">hllo</div>
+  <div class="div1">
+
+      <input type="text" id="longUrl" placeholder="Enter Long URL Here ...">
+      <button id="shortenBtn">Shorten</button>
+  </div>  
+
+      
+   <div id="result" >Shortened URL will appear here
+  </div>
   <script src="popup.js"></script>
 </body>
 </html>
